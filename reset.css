@@ -1,0 +1,81 @@
+/* CSS Reset Modernizado */
+
+/* Remover margens, preenchimentos e bordas padrão */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Elementos de bloco */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+/* Estilização do corpo */
+body {
+    line-height: 1.5; /* Melhor legibilidade */
+    font-family: sans-serif; /* Fonte padrão mais moderna */
+}
+
+/* Listas */
+ol,
+ul {
+    list-style: none;
+}
+
+/* Citações */
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: '';
+}
+
+/* Tabelas */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Links */
+a {
+    text-decoration: none; /* Remove sublinhado padrão */
+    color: inherit; /* Herda a cor do elemento pai */
+}
+
+/* Estilização de elementos comuns */
+img {
+    max-width: 100%; /* Imagens responsivas */
+    height: auto;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit; /* Garante a consistência da fonte */
+}
+
+/* Responsividade básica */
+@media (max-width: 600px) {
+    body {
+        line-height: 1.6; /* Aumenta a legibilidade em telas menores */
+    }
+}

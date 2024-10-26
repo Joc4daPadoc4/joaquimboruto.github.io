@@ -1,0 +1,229 @@
+/* Reset básico para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a1a2e; /* Azul escuro */
+    color: #ffffff; /* Texto em branco */
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.cabeçalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #0a1a2e; /* Azul escuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    position: relative; /* Para posicionamento do menu */
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #ffffff; /* Branco */
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Estilo do menu */
+.lista-menu {
+    list-style: none;
+    display: none; /* Oculta o menu por padrão */
+    position: absolute; /* Para sobrepor o conteúdo */
+    background-color: #0a1a2e; /* Azul escuro */
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    z-index: 10; /* Para que fique acima de outros elementos */
+}
+
+/* Mostrar o menu quando ativo */
+.lista-menu.show {
+    display: block; /* Exibe o menu */
+}
+
+.lista-menu__titulo {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff; /* Branco */
+}
+
+.lista-menu__item {
+    margin: 5px 0; /* Margem entre os itens */
+}
+
+/* Estilo dos links do menu */
+.lista-menu__item a {
+    color: #ffffff; /* Branco */
+    text-decoration: none;
+    padding: 10px;
+    display: block; /* Para aumentar a área clicável */
+    border-radius: 5px;
+}
+
+/* Muda a cor do link ao passar o mouse */
+.lista-menu__item a:hover {
+    background-color: #ffffff; /* Fundo branco ao passar o mouse */
+    color: #0a1a2e; /* Texto em azul escuro */
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/banner-background.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.banner__titulo {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.banner__texto {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Barra de pesquisa */
+.banner__pesquisa {
+    padding: 15px;
+    width: 80%;
+    max-width: 400px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff; /* Fundo branco */
+    color: #0a1a2e; /* Texto azul escuro */
+}
+
+.banner__pesquisa:focus {
+    background-color: #e0e0e0; /* Cor ao focar */
+}
+
+/* Centralização do GIF */
+.gif-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 20px; /* Espaçamento ao redor */
+    margin: 40px 0; /* Margem para separar do conteúdo */
+}
+
+.gif-container img {
+    max-width: 80%; /* Ajusta a largura do GIF */
+    height: auto; /* Mantém a proporção */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+}
+
+/* Carrossel */
+.carrossel {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #0a1a2e; /* Azul escuro */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.swiper-slide {
+    position: relative; /* Para posicionar o efeito corretamente */
+    overflow: hidden; /* Para esconder o efeito que sai do slide */
+}
+
+.swiper-slide img {
+    width: 80%; /* Ajusta a largura da imagem */
+    border-radius: 10px;
+    z-index: 1; /* Garante que a imagem fique acima do efeito */
+}
+
+/* Tópicos */
+.tópicos {
+    background-color: #ffffff; /* Fundo branco */
+    color: #0a1a2e; /* Texto azul escuro */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.tópicos__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.tópicos__item {
+    margin: 10px;
+}
+
+.tópicos__link {
+    color: #0a1a2e; /* Texto azul escuro */
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 5px;
+}
+
+/* Contato */
+.contato {
+    padding: 40px;
+    text-align: center;
+    background-color: #0a1a2e; /* Azul escuro */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contato__email {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: #ffffff; /* Fundo branco */
+    color: #0a1a2e; /* Texto azul escuro */
+}
+
+/* Rodapé */
+.rodapé {
+    text-align: center;
+    padding: 20px;
+    background-color: #0a1a2e; /* Azul escuro */
+    color: white;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .banner__titulo {
+        font-size: 2rem;
+    }
+
+    .banner__texto {
+        font-size: 1rem;
+    }
+
+    .lista-menu__item {
+        flex-direction: column; /* Para dispositivos menores */
+    }
+    
+    .lista-menu {
+        display: none; /* Esconde o menu por padrão */
+    }
+    
+    .lista-menu.show {
+        display: block; /* Exibe o menu quando a classe 'show' é adicionada */
+    }
+}
